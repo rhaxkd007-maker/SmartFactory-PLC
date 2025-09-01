@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>MES - LED 제어</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+
+{% include 'header.html' %}
+
+<main class="main-container">
+  <section class="section-led-control">
+    <h2>MQTT 기반 실시간 LED 제어</h2>
+    <p>아래 버튼을 눌러 공정 장비의 상태를 제어하세요.</p>
+    <div style="margin-top: 15px;">
+      <button class="btn-cta" onclick="controlLED('on')">LED 켜기</button>
+      <button class="btn-cta" onclick="controlLED('off')">LED 끄기</button>
+    </div>
+  </section>
+
+  <section class="section-led-status" style="margin-top: 30px;">
+    <h3>현재 LED 상태</h3>
+    <p>LED 상태: <span id="led_status">로딩 중...</span></p>
+    <p>LED 켜짐 시각: <span id="led_on_time">-</span></p>
+    <p>LED 꺼짐 시각: <span id="led_off_time">-</span></p>
+  </section>
+</main>
+
+{% include 'footer.html' %}
+
+<script>
+  function fetchLedStatus() {
+    fetch('/mes/led_status')
+      .then(res => res.json())
+      .then(data => {
+        if(data.error) {
+          alert(data.error);
+          return;
+        }
+        document.getElementById('led_status').textContent = data.status;
+        document.getElementById('led_on_time').textContent = data.on_time || '-';
+        document.getElementById('led_off_time').textContent = data.off_time || '-';
+      })
+      .catch(err => alert('상태 로드 실패: ' + err));
+  }
+
+  function controlLED(status) {
+    fetch('/mes/led_control', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({status: status})
+    })
+    .then(res => res.json())
+    .then(data => {
+      alert(data.message || data.error);
+      fetchLedStatus();  // 상태 업데이트
+    })
+    .catch(err => alert('제어 오류: ' + err));
+  }
+
+  // 3초마다 상태 자동 갱신
+  setInterval(fetchLedStatus, 3000);
+
+  // 페이지 로드시 상태 조회
+  fetchLedStatus();
+</script>
+
+</body>
+</html>

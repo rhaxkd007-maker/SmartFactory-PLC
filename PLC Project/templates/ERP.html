@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>ERP - LED 사용 통계</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+
+{% include 'header.html' %}
+
+<main class="main-container">
+  <h2>ERP - LED 사용 통계</h2>
+
+  <div class="card">
+    <h3>💡 전구 사용 정보</h3>
+    <p>전구 켜짐 시각: <span id="on_time">-</span></p>
+    <p>전구 꺼짐 시각: <span id="off_time">-</span></p>
+    <p>사용 시간 (초): <span id="duration_sec">0</span> 초</p>
+    <p>소비 전력량 (초당 10W 기준): <span id="power_kwh">0.00</span> kWh</p>
+    <p>탄소 배출량 (초당 계산): <span id="co2_kg">0.00</span> kgCO₂</p>
+  </div>
+
+  <button onclick="loadLedLog()">새로고침</button>
+</main>
+
+{% include 'footer.html' %}
+
+<script>
+  function loadLedLog() {
+    fetch('/erp/led_log_data')
+      .then(res => res.json())
+      .then(data => {
+        if(data.error) {
+          alert(data.error);
+          return;
+        }
+        document.getElementById('on_time').textContent = data.on_time || '-';
+        document.getElementById('off_time').textContent = data.off_time || '-';
+        document.getElementById('duration_sec').textContent = data.duration_sec || '0';
+        document.getElementById('power_kwh').textContent = Number(data.power_kwh).toFixed(6);
+        document.getElementById('co2_kg').textContent = Number(data.co2_kg).toFixed(6);
+      })
+      .catch(err => alert('데이터 로드 실패: ' + err));
+  }
+
+  window.onload = loadLedLog;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<div class="navbar">
+  <div class="navbar-logo">
+    <img src="/static/assets/logo_orange_mushroom.png" alt="ERP 로고" height="80">
+    <a href="/" class="navbar-title">트러플향 첨가</a>
+  </div>
+    <div class="navbar-menu">
+      <a href="/">홈</a>
+      {% if 'operator_id' in session %}
+        <a href="/mes">MES</a>
+        <a href="/erp">ERP</a>
+        <a href="/logout">로그아웃</a>
+      {% else %}
+        <a href="/login">로그인</a>
+      {% endif %}
+    </div>
+</div>

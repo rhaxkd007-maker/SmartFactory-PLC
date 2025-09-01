@@ -1,0 +1,146 @@
+/* 로그인 페이지 전용 스타일 */
+body.login-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+}
+
+/* 로그인 컨테이너 */
+.login-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+}
+
+.login-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* 폼 그룹 */
+.login-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.login-form label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.login-form input {
+  width: 92%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.btn-login, .btn-register {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.btn-login {
+  background-color: #4c6ef5;
+}
+
+.btn-register {
+  background-color: #adb5bd;
+  margin-left: 10px; /* 버튼 간격 조정 */
+}
+
+.btn-login:hover {
+  background-color: #3b5bdb;
+}
+
+.btn-register:hover {
+  background-color: #868e96;
+}
+
+
+/* 로그인 링크 영역 */
+.login-links {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.login-links a {
+  color: #00b894;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main.main-container {
+  flex: 1;
+}
+
+/* 푸터 */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+
+/* 홈으로 가기 버튼 */
+.btn-home {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.5rem;
+  background-color: #636e72;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-home:hover {
+  background-color: #2d3436;
+}
+
+/* 애니메이션 */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+
+

@@ -1,0 +1,439 @@
+/* ======================================
+   index.html 전용 project.css 스타일
+   ====================================== */
+
+/* === 기본 설정 === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #f0f9f4; /* 밝은 민트 계열 */
+  color: #333;
+  line-height: 1.7;
+}
+
+main.main-container {
+  padding: 4rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+
+/* === Hero 섹션 === */
+.hero {
+  text-align: center;
+  background: linear-gradient(135deg, #a8edea, #fed6e3);
+  padding: 6rem 2rem;
+  border-radius: 20px;
+  margin-bottom: 5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.hero-title {
+  font-size: 3rem;
+  color: #2e8b57;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #4a5568;
+  margin-top: 1rem;
+}
+
+
+/* === 인트로 섹션 === */
+.section-intro {
+  margin-bottom: 5rem;
+}
+
+.intro-content {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 4px 12px rgba(0, 128, 0, 0.08);
+}
+
+.intro-content h2 {
+  font-size: 2.2rem;
+  color: #2e7d32;
+  margin-bottom: 1.5rem;
+}
+
+.intro-content p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+
+/* === 주요 기능 및 기술 특징 섹션 === */
+.section-features {
+  margin-bottom: 5rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background: linear-gradient(135deg, #e0f7ec, #f0f9f4);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 128, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  color: #38b000;
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  color: #4a5568;
+  font-size: 1rem;
+}
+
+
+/* === ESG 가치 섹션 === */
+.section-esg {
+  margin-bottom: 5rem;
+}
+
+.esg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.esg-card {
+  background: #ffffff;
+  border-left: 8px solid #48c774;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 128, 0, 0.1);
+}
+
+.esg-card h3 {
+  font-size: 1.6rem;
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+.esg-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+
+/* === 기대 성과 및 비전 섹션 === */
+.section-results {
+  background: linear-gradient(120deg, #b3ecec, #e9c4de);
+  padding: 4rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.section-results h2 {
+  font-size: 2.2rem;
+  color: #2e8b57;
+  margin-bottom: 2rem;
+}
+
+.section-results p {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+
+
+/* === 네비게이션 바 === */
+.navbar {
+  background-color: #48c774; /* 녹색 */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-logo img {
+  height: 80px;
+}
+
+.navbar-logo .navbar-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+.navbar-logo .navbar-title:hover {
+  color: #d4f1d7; /* 연한 녹색 */
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-menu a:hover {
+  color: #d4f1d7;
+}
+
+/* footer */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main.main-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: auto;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section-led-control h2,
+.section-led-log h2 {
+  margin-bottom: 10px;
+}
+
+.btn-cta {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  margin-right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.value {
+  font-family: monospace;
+}
+
+/* led 로그 페이지*/
+
+b/* 공통 스타일 */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #f9fafb;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #5ed87d; /* 브랜드 주황 */
+  border-bottom: 3px solid #5ed87d;
+  padding-bottom: 8px;
+}
+
+/* 카드 스타일 (ERP 전구 사용 정보) */
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 25px 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #5ed87d;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* 텍스트 줄 */
+p, .row {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 8px 0;
+  color: #444;
+}
+
+/* 라벨 강조 */
+.label {
+  font-weight: 600;
+  color: #555;
+}
+
+.value {
+  font-weight: 600;
+  color: #111;
+}
+
+/* 버튼 공통 */
+button, .btn-cta {
+  cursor: pointer;
+  background-color: #5ed87d;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+button:hover, .btn-cta:hover {
+  background-color: #5ed87d;
+}
+
+button:active, .btn-cta:active {
+  background-color: #5ed87d;
+}
+
+button:disabled, .btn-cta:disabled {
+  background-color: #f1f1f1;
+  color: #bbb;
+  cursor: not-allowed;
+}
+
+/* MES 페이지 스타일 */
+.section-led-control {
+  margin-bottom: 40px;
+}
+
+.section-led-control p {
+  font-size: 18px;
+  margin-top: 5px;
+  color: #666;
+}
+
+.section-led-status h3 {
+  margin-bottom: 12px;
+  color: 5ed87d;
+  font-weight: 700;
+}
+
+.section-led-status p {
+  font-size: 16px;
+  margin: 6px 0;
+  color: #333;
+}
+
+/* MES LED 상태 텍스트 */
+#led_status {
+  font-weight: 700;
+  color: #5ed87d;
+}
+
+/* ERP 새로고침 버튼 위치 및 마진 */
+button {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* 반응형 (간단히) */
+@media (max-width: 480px) {
+  .main-container {
+    margin: 20px 10px;
+    padding: 15px;
+  }
+
+  button, .btn-cta {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+}
+
