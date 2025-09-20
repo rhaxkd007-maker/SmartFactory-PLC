@@ -5,6 +5,8 @@ PLC기기, 센서 연결 필요. PLC기기 미연결시 정상작동 안 됨.
 -Languages-
 Python (주요 학습/평가/데이터 처리 전부 Python 기반)
 
+C++ (아두이노IDE에서 ESP32 제어 로직 작성)
+
 SQL (Oracle DB 및 CSV 처리 후 SQL 기반 관리/조회)
 
 Ladder Logic (PLC) (XG5000, XBC-DR14E 활용 제어 로직 작성)
