@@ -1,7 +1,4 @@
 --------------------------------------------------------
---  파일이 생성됨 - 월요일-9월-01-2025   
---------------------------------------------------------
---------------------------------------------------------
 --  DDL for Table LOG
 --------------------------------------------------------
 
@@ -53,3 +50,4 @@ ALTER TRIGGER "SENSOR"."SENSOR_LOG_TRG" ENABLE;
   ALTER TABLE "SENSOR"."LOG" MODIFY ("ACTION" NOT NULL ENABLE);
   ALTER TABLE "SENSOR"."LOG" MODIFY ("OBJ_DETECT" NOT NULL ENABLE);
   ALTER TABLE "SENSOR"."LOG" MODIFY ("HUMAN_DETECT" NOT NULL ENABLE);
+
