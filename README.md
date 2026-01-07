@@ -1,6 +1,9 @@
 PLC기기, 센서 연결 필요. PLC기기 미연결시 정상작동 안 됨.
 에너지 절약형 스마트팩토리 미니 모델 구축
 
+pir센서(적외선 움직임 센서)에 사람의 움직임이 감지되면 조명 on, 감지안되면 off
+컨베이어 벨트에 올라칸 물건이 포토센서에 감지되면 컨베이어 벨트 on, 감지되지 않으면 off
+
 기술
 -Languages-
 Python (주요 학습/평가/데이터 처리 전부 Python 기반)
@@ -41,3 +44,5 @@ XG5000, XP-Builder (PLC 래더 프로그램 작성)
 Visual Studio Code (Flask 서버 실행, 자동화 환경)
 
 Arduino IDE (ESP32 개발 및 업로드)
+
+https://youtube.com/shorts/cZj0AQz7-xA  시연영상
